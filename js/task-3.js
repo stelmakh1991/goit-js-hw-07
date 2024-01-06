@@ -1,12 +1,14 @@
-const eventElem = document.querySelector('input');
-const eventOutput = document.querySelector('#name-output');
+const inputData = document.querySelector('input');
+const helloNameOutput = document.querySelector('#name-output');
 
-eventElem.addEventListener('input', onInput);
+
+inputData.addEventListener('input', onInput);
 
 function onInput() {
-    if (eventElem.value.trim().length < 1) {
-        eventOutput.textContent = 'Anonymus';
+    const helloName = inputData.value.trim();
+    if (helloName.length < 1) {
+        helloNameOutput.textContent = 'Anonymous';
     } else {
-        eventOutput.textContent = eventElem.value.trim();
+        helloNameOutput.textContent = helloName;
     }
 };
