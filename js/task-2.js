@@ -30,14 +30,14 @@ const images = [
 // =================
 const imageList = document.querySelector('.gallery');
 // Creation of image card template
-function imageTemplate(obj) {
+function createImageItem(obj) {
   const url = obj.url;
   const alt = obj.alt;
   return `<li class="image-card"><img src="${url}" alt="${alt}" /></li>`;
 }
 //Image gallery creation from array using markup
 function createGalleryMarkup() {
-  const markup = images.map(imageTemplate).join('');
+  const markup = images.map(createImageItem).join('');
   imageList.insertAdjacentHTML('afterbegin', markup);
 }
 
