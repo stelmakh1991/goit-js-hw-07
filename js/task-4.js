@@ -12,10 +12,10 @@ function onFormSubmit(e) {
         password,
     };
 
-    if (email.length > 1 && password.length > 1) {
+    if (email === '' || password === '') {
+        alert('All form fields must be filled in');
+    } else {
         console.log(userData);
         e.target.reset();
-    } else {
-        alert('All form fields must be filled in');
     };
 };
