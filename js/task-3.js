@@ -6,7 +6,7 @@ inputData.addEventListener('input', onInput);
 
 function onInput() {
     const helloName = inputData.value.trim();
-    if (helloName.length < 1) {
+    if (helloName === '') {
         helloNameOutput.textContent = 'Anonymous';
     } else {
         helloNameOutput.textContent = helloName;
